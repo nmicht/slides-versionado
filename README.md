@@ -50,7 +50,22 @@ https://nmicht.github.io/slides-versionado/
     <li><a href="https://nmicht.github.io/slides-versionado/basics#/amend">Corregir commits</a></li>
   </ol>
   <li><a href="https://nmicht.github.io/slides-versionado/remotes">GIT, remotos</a></li>
-  <li><a href="#">GIT, ramas</a></li>
+  <ol>
+    <li><a href="https://nmicht.github.io/slides-versionado/remotes#/remoto">Repositorio remoto</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/remotes#/clone">Clonar un repositorio</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/remotes#/remote-v">Listar remotos</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/remotes#/remote-add">Agregar remoto</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/remotes#/push">Subir cambios a remoto</a></li>
+  </ol>
+  <li><a href="https://nmicht.github.io/slides-versionado/branches">GIT, ramas</a></li>
+  <ol>
+    <li><a href="https://nmicht.github.io/slides-versionado/branches#/branches">Qué es una rama</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/branches#/checkout-b">Crear una rama</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/branches#/checkout">Cambiarse entre ramas</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/branches#/merge">Fusionar cambios de una rama en otra</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/branches#/push">Subir rama a remoto</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/branches#/push-all">Subir todas las ramas al remoto</a></li>
+  </ol>
   <li><a href="#">Flujos de trabajo</a></li>
   <li><a href="#">Git, Hooks</a></li>
 </ol>
