@@ -46,7 +46,7 @@
           <li><a href="#/mv">Mover archivos</a></li>
           <li><a href="#/diff">Cambios entre versiones</a></li>
           <li><a href="#/log">Historial (log)</a></li>
-          <li><a href="#/logautor">Log Author</a></li>
+          
           <li><a href="#/reset1">Quitar del stage</a></li>
           <li><a href="#/checkout1">Cancelar cambios</a></li>
           <li><a href="#/amend">Corrigiendo commits</a></li>
@@ -158,16 +158,7 @@ git status
         Esto incluye información sobre el autor de los cambios, el mensaje breve
         utilizado, la fecha en que se realizó y el número de serial (hash).
       </section>
-      <section id="logautor">
-        <h4>Log por Autor</h4>
-        Formatea la consulta log en base a los  parametros de autor.
-
-        <pre><code data-trim>git log --author="alfredo"</code></pre>
-        <pre><code data-trim>git log --format='%H %an' | 
-  grep -v Adam | 
-  cut -d ' ' -f1 | 
-  xargs -n1 git log -1</code></pre>
-      </section>
+     
 
       <section id="stat">
         <h3>Log con estadísticas</h3>
