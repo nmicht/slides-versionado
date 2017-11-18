@@ -15,7 +15,7 @@
   <!-- Theme used for syntax highlighting of code -->
   <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
 
-  <!-- Printing and PDF exports -->
+  <!-- Printing and PDF expo
   <script>
   var link = document.createElement( 'link' );
   link.rel = 'stylesheet';
@@ -37,11 +37,12 @@
       <section id="index">
         <ol>
           <li><a href="#/start">Inicializar un repositorio</a></li>
+          <li><a href="#/status">Revisar el estado actual de trabajo</a></li>
           <li><a href="#/add">Agregar archivos al stage</a></li>
           <li><a href="#/comodines">Comodines para git add</a></li>
           <li><a href="#/commit">Hacer un commit</a></li>
           <li><a href="#/commit1">¿Qué poner en el mensaje del commit?</a></li>
-          <li><a href="#/status">Revisar el estado actual de trabajo</a></li>
+          <li><a href="#/commit-add">Add y Commit juntos</a></li>
           <li><a href="#/rm">Eliminar archivos</a></li>
           <li><a href="#/mv">Mover archivos</a></li>
           <li><a href="#/diff">Cambios entre versiones</a></li>
@@ -120,6 +121,20 @@ git add Archivo1.txt
         </ul>
       </section>
 
+      <section id="commit-add">
+        <h3>Add y Commit juntos</h3>
+        Para hacer las cosas mas rápidas, puedes hacer un add y un commit en un
+        solo comando.<br>
+        <pre><code>git commit -a -m 'Mensaje'</code></pre>
+        <p class="warning">La bandera <strong>-a</strong> agrega los archivos modificados y
+        eliminados, pero no los nuevos</p>
+      </section>
+
+      <section>
+        También podrías ejecutar los dos comandos, pero en una misma linea.
+        <pre><code>git add . && git commit -m 'Mensaje'</code></pre>
+      </section>
+
       <section id="rm">
         <h4>Borrar archivo</h4>
         Sirve para borrar un archivo pero en este caso sirve para agregar al
@@ -148,7 +163,14 @@ git status
         Identifica todos los cambios de un archivo entre diferentes versiones.
         <pre><code data-trim>git diff </code></pre>
       </section>
-
+      
+      <section id="diff1">
+        <h3>Comparar dos commits</h3>
+        Los cambios en git tienen un número hexadecimal que los identifica. 
+        Para revisar la diferencia entre dos commits se debe utilizar el comando git diff especificando los números hexadecimales de cada commit a comparar        
+        <pre><code data-trim>git diff [options] <commit> <commit> [--] [<path>…​] </code></pre>
+      </section>
+      
       <section id="log">
         <h3>Historial (log)</h3>
         Ver el historial de cambios de nuestro repositorio
