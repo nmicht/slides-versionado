@@ -44,12 +44,13 @@ https://nmicht.github.io/slides-versionado/
     <li><a href="https://nmicht.github.io/slides-versionado/basics#/rm">Eliminar archivos</a></li>
     <li><a href="https://nmicht.github.io/slides-versionado/basics#/mv">Mover archivos</a></li>
     <li><a href="https://nmicht.github.io/slides-versionado/basics#/diff">Cambios entre versiones</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#/diff1">Diferencias entre dos commits</a></li>
     <li><a href="https://nmicht.github.io/slides-versionado/basics#/log">Historial (log)</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#/logauthor">Obtener Historial (log) por autor</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#/log_fecha">Historial entre fechas</a></li>
     <li><a href="https://nmicht.github.io/slides-versionado/basics#/reset1">Quitar del stage</a></li>
     <li><a href="https://nmicht.github.io/slides-versionado/basics#/checkout1">Cancelar cambios</a></li>
     <li><a href="https://nmicht.github.io/slides-versionado/basics#/amend">Corregir commits</a></li>
-	<li><a href="https://nmicht.github.io/slides-versionado/basics#/Commits/Diferencias entreCommits">Diferencias entre Commits</a></li>
-	
   </ol>
   <li><a href="https://nmicht.github.io/slides-versionado/remotes">GIT, remotos</a></li>
   <ol>

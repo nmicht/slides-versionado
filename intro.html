@@ -86,17 +86,7 @@
           <li>Posibilidad de realizar cambios sobre los elementos almacenados.</li>
           <li>Registro histórico de las acciones realizadas con cada elemento o
             conjunto de elementos.</li>
-	  <li>Fuerte apoyo al desarrollo no lineal, por ende rapidez en la gestión de ramas y mezclado de diferentes versiones. Git incluye herramientas específicas para navegar y visualizar un historial de desarrollo no lineal. Una presunción fundamental en Git es que un cambio será fusionado mucho más frecuentemente de lo que se escribe originalmente, conforme se pasa entre varios programadores que lo revisan.</li>
-<li>Gestión distribuida. Al igual que Darcs, BitKeeper, Mercurial, SVK, Bazaar y Monotone, Git le da a cada programador una copia local del historial del desarrollo entero, y los cambios se propagan entre los repositorios locales. Los cambios se importan como ramas adicionales y pueden ser fusionados en la misma manera que se hace con la rama local.</li>
-<li>Los almacenes de información pueden publicarse por HTTP, FTP, rsync o mediante un protocolo nativo, ya sea a través de una conexión TCP/IP simple o a través de cifrado SSH. Git también puede emular servidores CVS, lo que habilita el uso de clientes CVS pre-existentes y módulos IDE para CVS pre-existentes en el acceso de repositorios Git.</li>
-<li>Los repositorios Subversion y svk se pueden usar directamente con git-svn.</li>
-<li>Gestión eficiente de proyectos grandes, dada la rapidez de gestión de diferencias entre archivos, entre otras mejoras de optimización de velocidad de ejecución.</li>
-<li>Todas las versiones previas a un cambio determinado, implican la notificación de un cambio posterior en cualquiera de ellas a ese cambio (denominado autenticación criptográfica de historial). Esto existía en Monotone.</li>
-<li>Resulta algo más caro trabajar con ficheros concretos frente a proyectos, eso diferencia el trabajo frente a CVS, que trabaja con base en cambios de fichero, pero mejora el trabajo con afectaciones de código que concurren en operaciones similares en varios archivos.</li>
-<li>Los renombrados se trabajan basándose en similitudes entre ficheros, aparte de nombres de ficheros, pero no se hacen marcas explícitas de cambios de nombre con base en supuestos nombres únicos de nodos de sistema de ficheros, lo que evita posibles, y posiblemente desastrosas, coincidencias de ficheros diferentes en un único nombre.</li>
-<li>Realmacenamiento periódico en paquetes (ficheros). Esto es relativamente eficiente para escritura de cambios y relativamente ineficiente para lectura si el reempaquetado (con base en diferencias) no ocurre cada cierto tiempo.</li>
         </ul>
-Fuente: http://www.ictea.com/cs/knowledgebase.php?action=displayarticle&id=3484
       </section>
 
       <section id="clasificacion">
@@ -217,7 +207,7 @@ Fuente: http://www.ictea.com/cs/knowledgebase.php?action=displayarticle&id=3484
           desarrolladores una manera fácil de implicarse en los proyectos. <br>
           CVS sólo versiona archivos, no directorios; ofrece ramificaciones,
           etiquetado, y un buen rendimiento en la parte del cliente, pero no
-          maneja muy bien ficheros grandes ni archivos binarios.
+          maneja muy bien archivos grandes ni archivos binarios.
           Tampoco soporta cambios atómicos.
         </section>
         <section>
@@ -233,7 +223,7 @@ Fuente: http://www.ictea.com/cs/knowledgebase.php?action=displayarticle&id=3484
         <section>
           <h3>Subversión como evolución de CVS</h3>
           <ul>
-            <li>Renombar, copiar y mover ficheros y directorios sin perdida del histórico.</li>
+            <li>Renombar, copiar y mover archivos y directorios sin perdida del histórico.</li>
             <li>Commits atómicos.</li>
             <li>Implementación de tres tipos de acceso:</li>
             <li>Stand-alone</li>
@@ -287,24 +277,24 @@ Fuente: http://www.ictea.com/cs/knowledgebase.php?action=displayarticle&id=3484
         <section>
           <h3>Mercurial</h3>
           Mercurial ofrece, entre otras cosas, una completa indexación cruzada
-          de ficheros y conjutos de cambios; unos procotolos de sincronización
+          de archivos y conjutos de cambios; unos procotolos de sincronización
           SSH y HTTP eficientes respecto al uso de CPU y ancho de banda; una
           fusión arbitraria entre ramas de desarrolladores; una interfaz web
           autónoma integrada; portabilidad a UNIX, MacOS X, y Windows y más.
         </section>
-	<section>
+	      <section>
           <h3>Características de Mercurial</h3>
-          <li>Está implementado principalmente haciendo uso del lenguaje de 
-              programación Python, pero incluye una implementación binaria 
+          <li>Está implementado principalmente haciendo uso del lenguaje de
+              programación Python, pero incluye una implementación binaria
               de diff escrita en C.</li>
-          <li>Mercurial es una herramienta de gestión de control de fuente 
-              distribuida gratuita. Maneja eficientemente proyectos de cualquier 
+          <li>Mercurial es una herramienta de gestión de control de fuente
+              distribuida gratuita. Maneja eficientemente proyectos de cualquier
               tamaño y ofrece una interfaz fácil e intuitiva.</li>
-          <li>Es rápido y poderoso Mercurial maneja eficientemente proyectos 
-              de cualquier tamaño y tipo. Cada clon contiene el historial 
-              completo del proyecto, por lo que la mayoría de las acciones 
+          <li>Es rápido y poderoso Mercurial maneja eficientemente proyectos
+              de cualquier tamaño y tipo. Cada clon contiene el historial
+              completo del proyecto, por lo que la mayoría de las acciones
               son locales, rápidas y convenientes.</li>
-          <li>Mercurial admite una multitud de flujos de trabajo y puede mejorar 
+          <li>Mercurial admite una multitud de flujos de trabajo y puede mejorar
               fácilmente su funcionalidad con extensiones.</li>
           <li>Es fácil de aprender</li>
         </section>
@@ -316,6 +306,43 @@ Fuente: http://www.ictea.com/cs/knowledgebase.php?action=displayarticle&id=3484
           Cada directorio de trabajo de GIT es un repositorio completo con
           plenas capacidades de gestión de revisiones, sin depender del acceso
           a la red o de un servidor central.
+        </section>
+        <section>
+          <h3>Características de GIT</h3>
+          <ul>
+            <li>Fuerte apoyo al desarrollo no lineal, por ende rapidez en la
+              gestión de ramas y mezclado de diferentes versiones.</li>
+            <li>Gestión distribuida. Git le da a cada programador una copia
+              local del historial del desarrollo entero, y los cambios se
+              propagan entre los repositorios locales.</li>
+            <li>Los cambios se importan como ramas adicionales y pueden ser
+              fusionados en la misma manera que se hace con la rama local.</li>
+            <li>Los almacenes de información pueden publicarse por HTTP, FTP,
+              rsync o mediante un protocolo nativo, ya sea a través de una
+              conexión TCP/IP simple o a través de cifrado SSH.</li>
+            <li>Git puede emular servidores CVS, lo que habilita el uso de clientes
+              CVS pre-existentes y módulos IDE para CVS pre-existentes en el
+               acceso de repositorios Git.</li>
+          </ul>
+        </section>
+        <section>
+          <ul>
+            <li>Los repositorios Subversion y svk se pueden usar directamente
+            con git-svn.</li>
+            <li>Gestión eficiente de proyectos grandes, dada la rapidez de
+            gestión de diferencias entre archivos, entre otras mejoras de
+            optimización de velocidad de ejecución.</li>
+            <li>Todas las versiones previas a un cambio determinado, implican la
+            notificación de un cambio posterior en cualquiera de ellas a ese
+            cambio (denominado autenticación criptográfica de historial).</li>
+            <li>Los renombrados se trabajan basándose en similitudes entre
+            archivos, aparte de nombres de archivos, pero no se hacen marcas
+            explícitas de cambios de nombre con base en supuestos nombres únicos</li>
+            <li>Realmacenamiento periódico en paquetes (archivos). Esto es
+            relativamente eficiente para escritura de cambios y relativamente
+            ineficiente para lectura si el reempaquetado (con base en diferencias)
+            no ocurre cada cierto tiempo.</li>
+          </ul>
         </section>
         <section>
           <h3>Bazaar</h3>
