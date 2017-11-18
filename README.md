@@ -16,6 +16,7 @@ https://nmicht.github.io/slides-versionado/
       <ul>
         <li><a href="https://nmicht.github.io/slides-versionado/intro#locales">Locales</a></li>
         <li><a href="https://nmicht.github.io/slides-versionado/intro#centralizados">Centralizados</a></li>
+		<li><a href="https://nmicht.github.io/slides-versionado/intro#cbazaar">Caracteristicas de Bazaar</a></li>
         <li><a href="https://nmicht.github.io/slides-versionado/intro#distribuidos">Distribuidos</a></li>
       </ul>
     <li><a href="https://nmicht.github.io/slides-versionado/intro#/git-vs-mercurial">GIT vs Mercurial</a></li>
