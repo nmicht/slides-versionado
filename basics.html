@@ -1,60 +1,62 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>Control de Versiones | Maestría en Desarrollo Web</title>
+        <title>Control de Versiones | Maestría en Desarrollo Web</title>
 
-  <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <link rel="stylesheet" href="reveal.js/css/theme/simple.css">
-  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/css/custom.css">
+        <link rel="stylesheet" href="reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="reveal.js/css/theme/simple.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/custom.css">
 
 
-  <!-- Theme used for syntax highlighting of code -->
-  <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
 
-  <!-- Printing and PDF expo
-  <script>
-  var link = document.createElement( 'link' );
-  link.rel = 'stylesheet';
-  link.type = 'text/css';
-  link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-  document.getElementsByTagName( 'head' )[0].appendChild( link );
-  </script>
-</head>
-<body>
-  <div class="reveal">
-    <div class="slides">
-      <!-- Presentation -->
-      <section>
+        <!-- Printing and PDF expo
+        <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+      </head>
+      <body>
+        <div class="reveal">
+          <div class="slides">
+        <!-- Presentation -->
+    <section>
         <h3>Maestría en Desarrollo Web</h3>
         <h2>Control de Versiones</h2>
         <h1>GIT, comandos básicos</h1>
-      </section>
+    </section>
 
-      <section id="index">
+    <section id="index">
         <ol>
-          <li><a href="#/start">Inicializar un repositorio</a></li>
-          <li><a href="#/status">Revisar el estado actual de trabajo</a></li>
-          <li><a href="#/add">Agregar archivos al stage</a></li>
-          <li><a href="#/comodines">Comodines para git add</a></li>
-          <li><a href="#/commit">Hacer un commit</a></li>
-          <li><a href="#/commit1">¿Qué poner en el mensaje del commit?</a></li>
-          <li><a href="#/commit-add">Add y Commit juntos</a></li>
-          <li><a href="#/rm">Eliminar archivos</a></li>
-          <li><a href="#/mv">Mover archivos</a></li>
-          <li><a href="#/diff">Cambios entre versiones</a></li>
-          <li><a href="#/log">Historial (log)</a></li>
-		  <li><a href="#/logauthor">Obtener Historial (log) por autor/a></li>
-          <li><a href="#/reset1">Quitar del stage</a></li>
-          <li><a href="#/checkout1">Cancelar cambios</a></li>
-          <li><a href="#/amend">Corrigiendo commits</a></li>
+            <li><a href="#/start">Inicializar un repositorio</a></li>
+            <li><a href="#/status">Revisar el estado actual de trabajo</a></li>
+            <li><a href="#/add">Agregar archivos al stage</a></li>
+            <li><a href="#/comodines">Comodines para git add</a></li>
+            <li><a href="#/commit">Hacer un commit</a></li>
+            <li><a href="#/commit1">¿Qué poner en el mensaje del commit?</a></li>
+            <li><a href="#/commit-add">Add y Commit juntos</a></li>
+            <li><a href="#/rm">Eliminar archivos</a></li>
+            <li><a href="#/mv">Mover archivos</a></li>
+            <li><a href="#/diff">Cambios entre versiones</a></li>
+            <li><a href="#/log">Historial (log)</a></li>
+            <li><a href="#/logDate">Log por Fecha</a></li>
+            <li><a href="#/logauthor">Obtener Historial (log) por autor/a></li>
+            <li><a href="#/reset1">Quitar del stage</a></li>
+            <li><a href="#/checkout1">Cancelar cambios</a></li>
+            <li><a href="#/amend">Corrigiendo commits</a></li>
+            
         </ol>
-      </section>
+    </section>
 
-      <section id="start">
+    <section id="start">
         <h4>Inicializar un repositorio</h4>
         Un repositorio es una carpeta o conjunto de carpetas que contienen
         archivos.
@@ -63,24 +65,24 @@
 mkdir Ejemplo && cd Ejemplo
 git init .
         </code></pre>
-      </section>
+    </section>
 
-      <section>
+    <section>
         Con el comando git init se crea una carpeta oculta llamada .git y
         contiene toda la información necesaria para que podamos realizar las
         versiones (copias de seguridad) de nuestro proyecto. <br>
         En este punto Git no está llevando el control de ningún archivo.
-      </section>
+    </section>
 
-      <section id="status">
+    <section id="status">
         <h4>Estatus</h4>
         Identifica si existe un archivo modificado o no en nuestro repositorio.
         Esto es importante ya que hay que ubicar los archivos en el escenario
         antes de consolidarlos en la base de datos.
         <pre><code data-trim>git status</code></pre>
-      </section>
+    </section>
 
-      <section id="add">
+    <section id="add">
         <h4>Agregar archivos al escenario ("stage")</h4>
         <pre><code data-trim>
 touch Archivo1.txt
@@ -91,52 +93,52 @@ git add Archivo1.txt
         (agregando el archivo al escenario) que los cambios que realizamos
         sobre Archivo1.txt se quieren respaldar la próxima vez que
         consolidemos la información.
-      </section>
+    </section>
 
-      <section id="comodines">
+    <section id="comodines">
         <h4>Comodines de git add</h4>
         <ul>
-          <li>git add <strong>-A</strong> / git add <strong>.</strong>: Agrega todos</li>
-          <li>git add <strong>--ignore-removal</strong>: Agrega nuevos y modificados, sin los eliminados</li>
-          <li>git add <strong>-u</strong>: Agrega modificados y eliminados, sin los nuevos</li>
+            <li>git add <strong>-A</strong> / git add <strong>.</strong>: Agrega todos</li>
+            <li>git add <strong>--ignore-removal</strong>: Agrega nuevos y modificados, sin los eliminados</li>
+            <li>git add <strong>-u</strong>: Agrega modificados y eliminados, sin los nuevos</li>
         </ul>
-      </section>
+    </section>
 
-      <section id="commit">
+    <section id="commit">
         <h4>Consolidar la información ("commitear")</h4>
         Para consolidar el archivo previamente creado y puesto en escenario.
         <pre><code data-trim>git commit -m "Commit Inicial"</code></pre>
         <p class="info">
-          La bandera -m indica que se debe consolidar el archivo con un mensaje
-          informativo.
+            La bandera -m indica que se debe consolidar el archivo con un mensaje
+            informativo.
         </p>
-      </section>
+    </section>
 
-      <section id="commit1">
+    <section id="commit1">
         <h3>¿Qué poner en el mensaje del commit?</h3>
         <ul>
-          <li>Resume los cambios en 50 caracteres o menos</li>
-          <li>Brinca una linea en blanco</li>
-          <li>Describe detalladamente los cambios, puedes usar bullets</li>
-          <li>Sigue una guía con base a tu proyecto</li>
+            <li>Resume los cambios en 50 caracteres o menos</li>
+            <li>Brinca una linea en blanco</li>
+            <li>Describe detalladamente los cambios, puedes usar bullets</li>
+            <li>Sigue una guía con base a tu proyecto</li>
         </ul>
-      </section>
+    </section>
 
-      <section id="commit-add">
+    <section id="commit-add">
         <h3>Add y Commit juntos</h3>
         Para hacer las cosas mas rápidas, puedes hacer un add y un commit en un
         solo comando.<br>
         <pre><code>git commit -a -m 'Mensaje'</code></pre>
         <p class="warning">La bandera <strong>-a</strong> agrega los archivos modificados y
-        eliminados, pero no los nuevos</p>
-      </section>
+            eliminados, pero no los nuevos</p>
+    </section>
 
-      <section>
+    <section>
         También podrías ejecutar los dos comandos, pero en una misma linea.
         <pre><code>git add . && git commit -m 'Mensaje'</code></pre>
-      </section>
+    </section>
 
-      <section id="rm">
+    <section id="rm">
         <h4>Borrar archivo</h4>
         Sirve para borrar un archivo pero en este caso sirve para agregar al
         escenario el archivo que vayamos a borrar
@@ -148,49 +150,64 @@ git status
 git rm Archivo1.txt
 git status
         </code></pre>
-      </section>
+    </section>
 
-      <section id="mv">
+    <section id="mv">
         <h4>Mover archivos o cambiar nombres</h4>
         Confirma cualquier cambio de nombre o movimiento de un archivo
         <pre><code data-trim>
 git mv Archivo2.txt Archivo2_cambio_de_nombre.txt
 git status
         </code></pre>
-      </section>
+    </section>
 
-      <section id="diff">
+    <section id="diff">
         <h3>Cambios entre versiones</h3>
         Identifica todos los cambios de un archivo entre diferentes versiones.
         <pre><code data-trim>git diff </code></pre>
-      </section>
-      
-      <section id="diff1">
+    </section>
+
+    <section id="diff1">
         <h3>Comparar dos commits</h3>
         Los cambios en git tienen un número hexadecimal que los identifica. 
         Para revisar la diferencia entre dos commits se debe utilizar el comando git diff especificando los números hexadecimales de cada commit a comparar        
         <pre><code data-trim>git diff [options] <commit> <commit> [--] [<path>…​] </code></pre>
-      </section>
-      
-      <section id="log">
-        <h3>Historial (log)</h3>
-        Ver el historial de cambios de nuestro repositorio
-        <pre><code>git log</code></pre>
-        Es utilizado para ver el historial de cambios de nuestro repositorio.
-        Esto incluye información sobre el autor de los cambios, el mensaje breve
-        utilizado, la fecha en que se realizó y el número de serial (hash).
-      </section>
+                        </section>
 
-	  <section id="logauthor">
-        <h3>Historial por autor (log --author)</h3>
-        Ver el historial de cambios de nuestro repositorio por autor
-        <pre><code>git log --author</code></pre>
-        Es utilizado para ver el historial de cambios de nuestro repositorio.
-        Muestra sólo aquellas confirmaciones cuyo autor coincide con la cadena especificada.
-        Esto incluye información sobre el autor de los cambios, el mensaje breve
-        utilizado, la fecha en que se realizó y el número de serial (hash).
-        <h5>Ejemplo</h5>
-        <pre><code data-trim>
+                        <section id="log">
+                            <h3>Historial (log)</h3>
+                            Ver el historial de cambios de nuestro repositorio
+                            <pre><code>git log</code></pre>
+                            Es utilizado para ver el historial de cambios de nuestro repositorio.
+                            Esto incluye información sobre el autor de los cambios, el mensaje breve
+                            utilizado, la fecha en que se realizó y el número de serial (hash).
+                        </section>
+                        <section id="logDate">
+                            <h4>Log por Fecha</h4>
+                            Se tienen varias opciones para la verificacion de los commit's:
+                            ¿Qué tal si queremos ver todos los commits hechos desde ayer? Todo lo que necesitamos es la <b>--sinceopción</b>:
+                            <pre><code data-trim>
+$ git log --since = "yesterday"
+        </code></pre>
+                            También podemos usar --until para obtener todas las confirmaciones hasta una fecha determinada; o, por supuesto, podemos utilizar ambas opciones:
+                            <pre><code data-trim>
+$ git log --since="1 week ago" --until="yesterday"
+        </code></pre>
+                            --sincey --until también se puede usar con whatchanged.
+                            <pre><code data-trim>
+$ git whatchanged --since = "1/1/2010"
+        </code></pre>
+                        </section>
+                        <section id="logauthor">
+                            <h3>Historial por autor (log --author)</h3>
+                            Ver el historial de cambios de nuestro repositorio por autor
+                            <pre><code>git log --author</code></pre>
+                            Es utilizado para ver el historial de cambios de nuestro repositorio.
+                            Muestra sólo aquellas confirmaciones cuyo autor coincide con la cadena especificada.
+                            Esto incluye información sobre el autor de los cambios, el mensaje breve
+                            utilizado, la fecha en que se realizó y el número de serial (hash).
+                            <h5>Ejemplo</h5>
+                            <pre><code data-trim>
           $ git log --author=alepam90
           commit 8083fda65180f77a9f5e03d43e7db8e7432c5c52 (HEAD -> master)
           Author: alepam90 <alexita.2090@gmail.com>
@@ -204,92 +221,94 @@ git status
 
               Modificacion en el archivo
         </code></pre>
-      </section>
-	  
-      <section id="stat">
-        <h3>Log con estadísticas</h3>
-        <pre><code>git log --stat</code></pre>
-        Muestra los archivos y las estadisticas de cambios en cada uno de ellos.
-      </section>
+                                            </section>
 
-      <section>
-        <h3>Log con datos de cambios</h3>
-        <pre><code>git log -p</code></pre>
-        Muestra las líneas donde se realizaron los cambios
-        <p class="info">La bandera -1 se utiliza para observar únicamente lo
-          último que fue commiteado.</p>
-      </section>
+                                            <section id="stat">
+                                                <h3>Log con estadísticas</h3>
+                                                <pre><code>git log --stat</code></pre>
+                                                Muestra los archivos y las estadisticas de cambios en cada uno de ellos.
+                                            </section>
 
-      <section>
-        <h3>Log abreviado</h3>
-        <pre><code>git log --pretty=format:"%h - %an - %ar - %s" --graph</code></pre>
-        <p class="info">Se pueden utilizar todas las banderas para cambiar las
-          salidas</p>
-      </section>
+                                            <section>
+                                                <h3>Log con datos de cambios</h3>
+                                                <pre><code>git log -p</code></pre>
+                                                Muestra las líneas donde se realizaron los cambios
+                                                <p class="info">La bandera -1 se utiliza para observar únicamente lo
+                                                    último que fue commiteado.</p>
+                                            </section>
 
-      <section id="log_fecha">
-        <h3>Historial entre fechas</h3>
-        Ver el historial de cambios de nuestro repositorio entre fechas
-        <pre><code>git log --since="2017-11-17"</code></pre>
-        Es utilizado para ver el historial de cambios de nuestro repositorio. Despues de la fecha.
-        <pre><code>git log --before="2017-11-17"</code></pre>
-        Es utilizado para ver el historial de cambios de nuestro repositorio. antes de la fecha.
-      </section>
+                                            <section>
+                                                <h3>Log abreviado</h3>
+                                                <pre><code>git log --pretty=format:"%h - %an - %ar - %s" --graph</code></pre>
+                                                <p class="info">Se pueden utilizar todas las banderas para cambiar las
+                                                    salidas</p>
+                                            </section>
 
-      <section id="reset1">
-        <h3>Quitar archivos del stage</h3>
-        ¿Qué sucede si agregamos al escenario un archivo que ya no queremos
-        consolidarlo en ese instante? La lógica induce a que lo bajemos del
-        escenario y eso es precisamente lo que hace git reset.
-        <pre><code>git reset HEAD file</code></pre>
-      </section>
+                                            <section id="log_fecha">
+                                                <h3>Historial entre fechas</h3>
+                                                Ver el historial de cambios de nuestro repositorio entre fechas
+                                                <pre><code>git log --since="2017-11-17"</code></pre>
+                                                Es utilizado para ver el historial de cambios de nuestro repositorio. Despues de la fecha.
+                                                <pre><code>git log --before="2017-11-17"</code></pre>
+                                                Es utilizado para ver el historial de cambios de nuestro repositorio. antes de la fecha.
+                                            </section>
 
-      <section id="checkout1">
-        <h3>Cancelar los cambios</h3>
-        ¿Qué pasaría si ahora nos arrepentimos de esa última modificación que
-        aún no commiteamos y la quisiéramos eliminar?
-        <pre><code>git checkout -- file</code></pre>
-      </section>
+                                            <section id="reset1">
+                                                <h3>Quitar archivos del stage</h3>
+                                                ¿Qué sucede si agregamos al escenario un archivo que ya no queremos
+                                                consolidarlo en ese instante? La lógica induce a que lo bajemos del
+                                                escenario y eso es precisamente lo que hace git reset.
+                                                <pre><code>git reset HEAD file</code></pre>
+                                            </section>
 
-      <section id="amend">
-        <h3>Corrigiendo commits</h3>
-        Frecuentemente cuando trabajamos y consolidamos los cambios olvidamos
-        agregar al escenario algún archivo o simplemente lo modificamos tarde y
-        lo queremos agregar a la información consolidada anteriormente.
-        <pre><code data-trim>git commit --amend --no-edit</code></pre>
-      </section>
+                                            <section id="checkout1">
+                                                <h3>Cancelar los cambios</h3>
+                                                ¿Qué pasaría si ahora nos arrepentimos de esa última modificación que
+                                                aún no commiteamos y la quisiéramos eliminar?
+                                                <pre><code>git checkout -- file</code></pre>
+                                            </section>
 
-      <section id="amend1">
-        <h3>Corrigiendo commits</h3>
-        Si deseamos que el mensaje del commit cambie, podemos hacer uno nuevo
-        <pre><code data-trim>git commit --amend -m "Nuevo mensaje para el cambio"</code></pre>
-      </section>
+                                            <section id="amend">
+                                                <h3>Corrigiendo commits</h3>
+                                                Frecuentemente cuando trabajamos y consolidamos los cambios olvidamos
+                                                agregar al escenario algún archivo o simplemente lo modificamos tarde y
+                                                lo queremos agregar a la información consolidada anteriormente.
+                                                <pre><code data-trim>git commit --amend --no-edit</code></pre>
+                                            </section>
+
+                                            <section id="amend1">
+                                                <h3>Corrigiendo commits</h3>
+                                                Si deseamos que el mensaje del commit cambie, podemos hacer uno nuevo
+                                                <pre><code data-trim>git commit --amend -m "Nuevo mensaje para el cambio"</code></pre>
+                                            </section>
 
 
-      <section>
-        <a href="remotes">Ir al siguiente módulo</a>
-      </section>
+                                            <section>
+                                                <a href="remotes">Ir al siguiente módulo</a>
+                                            </section>
 
-    </div>
-  </div>
+                                            </div>
+                                            </div>
 
-  <script src="reveal.js/lib/js/head.min.js"></script>
-  <script src="reveal.js/js/reveal.js"></script>
+                                            <script src="reveal.js/lib/js/head.min.js"></script>
+                                            <script src="reveal.js/js/reveal.js"></script>
 
-  <script>
-  // More info about config & dependencies:
-  // - https://github.com/hakimel/reveal.js#configuration
-  // - https://github.com/hakimel/reveal.js#dependencies
-  Reveal.initialize({
-    controls: false,
-    slideNumber: true,
-    dependencies: [
-      { src: 'reveal.js/plugin/markdown/marked.js' },
-      { src: 'reveal.js/plugin/markdown/markdown.js' },
-      { src: 'reveal.js/plugin/notes/notes.js', async: true },
-      { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-    ]
-  });
-  </script>
-</body>
-</html>
+                                            <script>
+                                                // More info about config & dependencies:
+                                                // - https://github.com/hakimel/reveal.js#configuration
+                                                // - https://github.com/hakimel/reveal.js#dependencies
+                                                Reveal.initialize({
+                                                    controls: false,
+                                                    slideNumber: true,
+                                                    dependencies: [
+                                                        {src: 'reveal.js/plugin/markdown/marked.js'},
+                                                        {src: 'reveal.js/plugin/markdown/markdown.js'},
+                                                        {src: 'reveal.js/plugin/notes/notes.js', async: true},
+                                                        {src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function () {
+                                                                hljs.initHighlightingOnLoad();
+                                                            }}
+                                                    ]
+                                                });
+                                            </script>
+                                            </body>
+                                            </html>
