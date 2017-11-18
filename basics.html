@@ -47,6 +47,7 @@
           <li><a href="#/mv">Mover archivos</a></li>
           <li><a href="#/diff">Cambios entre versiones</a></li>
           <li><a href="#/log">Historial (log)</a></li>
+		  <li><a href="#/logauthor">Obtener Historial (log) por autor/a></li>
           <li><a href="#/reset1">Quitar del stage</a></li>
           <li><a href="#/checkout1">Cancelar cambios</a></li>
           <li><a href="#/amend">Corrigiendo commits</a></li>
@@ -180,6 +181,31 @@ git status
         utilizado, la fecha en que se realizó y el número de serial (hash).
       </section>
 
+	  <section id="logauthor">
+        <h3>Historial por autor (log --author)</h3>
+        Ver el historial de cambios de nuestro repositorio por autor
+        <pre><code>git log --author</code></pre>
+        Es utilizado para ver el historial de cambios de nuestro repositorio.
+        Muestra sólo aquellas confirmaciones cuyo autor coincide con la cadena especificada.
+        Esto incluye información sobre el autor de los cambios, el mensaje breve
+        utilizado, la fecha en que se realizó y el número de serial (hash).
+        <h5>Ejemplo</h5>
+        <pre><code data-trim>
+          $ git log --author=alepam90
+          commit 8083fda65180f77a9f5e03d43e7db8e7432c5c52 (HEAD -> master)
+          Author: alepam90 <alexita.2090@gmail.com>
+          Date:   Tue Nov 14 21:01:16 2017 -0400
+
+              Se realizaron cambios en el archivo variables.js
+
+          commit 6dec2da50eab8541f3a29da9a2210439641cad3e
+          Author: alepam90 <alexita.2090@gmail.com>
+          Date:   Tue Nov 14 20:54:27 2017 -0400
+
+              Modificacion en el archivo
+        </code></pre>
+      </section>
+	  
       <section id="stat">
         <h3>Log con estadísticas</h3>
         <pre><code>git log --stat</code></pre>
