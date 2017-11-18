@@ -46,6 +46,7 @@ https://nmicht.github.io/slides-versionado/
     <li><a href="https://nmicht.github.io/slides-versionado/basics#/diff">Cambios entre versiones</a></li>
     <li><a href="https://nmicht.github.io/slides-versionado/basics#/log">Historial (log)</a></li>
 <li><a href="https://nmicht.github.io/slides-versionado/basics#/log">Log por Fecha</a></li>
+
     <li><a href="https://nmicht.github.io/slides-versionado/basics#/reset1">Quitar del stage</a></li>
     <li><a href="https://nmicht.github.io/slides-versionado/basics#/checkout1">Cancelar cambios</a></li>
     <li><a href="https://nmicht.github.io/slides-versionado/basics#/amend">Corregir commits</a></li>
