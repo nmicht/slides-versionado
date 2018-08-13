@@ -73,8 +73,7 @@
         </section>
         <section>
           Usar un VCS también significa generalmente que si arruinas o pierdes
-          archivos, será posible recuperarlos fácilmente. Adicionalmente,
-          obtendrás todos estos beneficios a un costo muy bajo.
+          archivos, será posible recuperarlos fácilmente.
         </section>
       </section>
 
@@ -192,7 +191,7 @@
           <h3>CVS centralizados:</h3>
           <ul>
             <li><a href="http://savannah.nongnu.org/projects/cvs">CVS</a></li>
-            <li><a href="https://subversion.apache.org/">Subversion</a></li>
+            <li><a href="https://subversion.apache.org/">Subversion (SVN)</a></li>
             <li><a href="https://www.perforce.com/">Perforce</a></li>
             <li><a href="https://www.visualstudio.com/es/team-services/tfvc/">Team Foundation Version Control(TFVC)</a></li>
           </ul>
@@ -204,8 +203,11 @@
           sistema de control de versiones de código abierto con acceso a redes
           de área amplia para desarrolladores, y el primero que ofreció
           "checkouts" anónimos de sólo lectura, los que dieron a los
-          desarrolladores una manera fácil de implicarse en los proyectos. <br>
-          CVS sólo versiona archivos, no directorios; ofrece ramificaciones,
+          desarrolladores una manera fácil de implicarse en los proyectos.
+        </section>
+	<section>
+          <h3>CVS</h3>
+          CVS sólo versiona archivos, no directorios; ofrece ramas,
           etiquetado, y un buen rendimiento en la parte del cliente, pero no
           maneja muy bien archivos grandes ni archivos binarios.
           Tampoco soporta cambios atómicos.
@@ -228,6 +230,11 @@
             <li>Implementación de tres tipos de acceso:</li>
             <li>Stand-alone</li>
             <li>Local</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Subversión como evolución de CVS</h3>
+          <ul>
             <li>Apache + webDAV</li>
             <li>Mejorado el sistema de permisos.</li>
             <li>Reducción del riesgo de vulnerabilidades por sus distintos RA (repository access).</li>
@@ -282,21 +289,28 @@
           fusión arbitraria entre ramas de desarrolladores; una interfaz web
           autónoma integrada; portabilidad a UNIX, MacOS X, y Windows y más.
         </section>
-	      <section>
+	<section>
           <h3>Características de Mercurial</h3>
-          <li>Está implementado principalmente haciendo uso del lenguaje de
-              programación Python, pero incluye una implementación binaria
-              de diff escrita en C.</li>
-          <li>Mercurial es una herramienta de gestión de control de fuente
-              distribuida gratuita. Maneja eficientemente proyectos de cualquier
-              tamaño y ofrece una interfaz fácil e intuitiva.</li>
-          <li>Es rápido y poderoso Mercurial maneja eficientemente proyectos
-              de cualquier tamaño y tipo. Cada clon contiene el historial
-              completo del proyecto, por lo que la mayoría de las acciones
-              son locales, rápidas y convenientes.</li>
-          <li>Mercurial admite una multitud de flujos de trabajo y puede mejorar
-              fácilmente su funcionalidad con extensiones.</li>
-          <li>Es fácil de aprender</li>
+	  <ul>
+            <li>Está implementado principalmente haciendo uso del lenguaje de
+                programación Python, pero incluye una implementación binaria
+                de diff escrita en C.</li>
+            <li>Mercurial es una herramienta de gestión de control de fuente
+                distribuida gratuita. Maneja eficientemente proyectos de cualquier
+                tamaño y ofrece una interfaz fácil e intuitiva.</li>
+	  </ul>
+        </section>
+	<section>
+          <h3>Características de Mercurial</h3>
+          <ul>
+            <li>Es rápido y poderoso Mercurial maneja eficientemente proyectos
+                de cualquier tamaño y tipo. Cada clon contiene el historial
+                completo del proyecto, por lo que la mayoría de las acciones
+                son locales, rápidas y convenientes.</li>
+            <li>Mercurial admite una multitud de flujos de trabajo y puede mejorar
+                fácilmente su funcionalidad con extensiones.</li>
+            <li>Es fácil de aprender</li>
+	  </ul>
         </section>
         <section>
           <h3>GIT</h3>
@@ -317,6 +331,11 @@
               propagan entre los repositorios locales.</li>
             <li>Los cambios se importan como ramas adicionales y pueden ser
               fusionados en la misma manera que se hace con la rama local.</li>
+          </ul>
+        </section>
+	<section>
+          <h3>Características de GIT</h3>
+          <ul>
             <li>Los almacenes de información pueden publicarse por HTTP, FTP,
               rsync o mediante un protocolo nativo, ya sea a través de una
               conexión TCP/IP simple o a través de cifrado SSH.</li>
@@ -326,6 +345,7 @@
           </ul>
         </section>
         <section>
+	  <h3>Características de GIT</h3>
           <ul>
             <li>Los repositorios Subversion y svk se pueden usar directamente
             con git-svn.</li>
@@ -335,6 +355,11 @@
             <li>Todas las versiones previas a un cambio determinado, implican la
             notificación de un cambio posterior en cualquiera de ellas a ese
             cambio (denominado autenticación criptográfica de historial).</li>
+          </ul>
+        </section>
+	<section>
+	  <h3>Características de GIT</h3>
+          <ul>
             <li>Los renombrados se trabajan basándose en similitudes entre
             archivos, aparte de nombres de archivos, pero no se hacen marcas
             explícitas de cambios de nombre con base en supuestos nombres únicos</li>
