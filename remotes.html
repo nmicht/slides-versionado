@@ -43,6 +43,8 @@
           <li><a href="#/ssh-keys">Crear llave ssh</a></li>
           <li><a href="#/remote-v">Listar remotos</a></li>
           <li><a href="#/remote-add">Agregar remoto</a></li>
+          <li><a href="#/remote-rm">Eliminar un remoto</a></li>
+          <li><a href="#/remote-rename">Renombrar un remoto</a></li>
           <li><a href="#/push">Subir cambios a remoto</a></li>
         </ol>
       </section>
@@ -141,7 +143,15 @@
 
       <section id="remote-rm">
         <h3>Quitar remotos</h3>
-        <pre><code>git remote rm origin</code></pre>
+        Si desea eliminar un remoto porque ya no lo usará, basta con ejecutar
+        este comando.
+        <pre><code>git remote rm &lt;nombre del remoto&gt;</code></pre>
+      </section>
+
+      <section id="remote-rename">
+        <h3>Renombrar remotos</h3>
+        Para hacer mas claro sus remotos, los puede renombrar.
+        <pre><code>git remote rename &lt;nombre actual&gt; &lt;nuevo nombre&gt;</code></pre>
       </section>
 
       <section id="push">
@@ -149,7 +159,7 @@
         Una vez que hemos conectado el repositorio remoto con el local y tenemos
         cambios consolidados en nuestra computadora que deseamos compartir,
         utilizamos el comando git push [remoto] [ramificación]
-        <pre><code>git push origin master</code></pre>
+        <pre><code>git push &lt;remoto&gt; &lt;rama&gt;</code></pre>
       </section>
 
       <section id="fetch">
@@ -179,7 +189,7 @@
         git pull realiza un fetch más un merge. Descarga los cambios que se
         encuentren en el repositorio remoto y los unifica con los cambios que
         tengamos en nuestro equipo.
-        <pre><code>git pull origin master</code></pre>
+        <pre><code>git pull &lt;remoto&gt; &lt;rama&gt;</code></pre>
       </section>
 
       <section>
