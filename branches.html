@@ -38,6 +38,7 @@
         <ol>
           <li><a href="#/branches">Qué es una rama</a></li>
           <li><a href="#/checkout-b">Crear una rama</a></li>
+          <li><a href="#/orphan">Crear una huérfana</a></li>
           <li><a href="#/checkout">Cambiarse entre ramas</a></li>
           <li><a href="#/merge">Fusionar cambios de una rama en otra</a></li>
           <li><a href="#/push">Subir rama a remoto</a></li>
@@ -76,6 +77,13 @@
         <h3>Crear y cambiarse de rama</h3>
         Podemos ahorrar pasos y crear y cambiarnos de rama al mismo tiempo.
         <pre><code>git checkout -b testing</code></pre>
+      </section>
+
+      <section id="orphan">
+        <h3>Crear una rama con historia limpia</h3>
+        Si se diese el caso de requerir una rama sin historia, es decir, inciando
+        en el primer punto de la historia, se puede lograr con *orphan*
+        <pre><code>git checkout --orphan rama</code></pre>
       </section>
 
       <section id="merge">
