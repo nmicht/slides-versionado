@@ -43,6 +43,9 @@
           <li><a href="#/merge">Fusionar cambios de una rama en otra</a></li>
           <li><a href="#/push">Subir rama a remoto</a></li>
           <li><a href="#/push-all">Subir todas las ramas al remoto</a></li>
+          <li><a href="#/push-fail">Resolver errores de git push</a></li>
+          <li><a href="#/stash">Resolver errores de git pull</a></li>
+          <li><a href="#/stash-pop">Recuperar archivos del stash</a></li>
         </ol>
       </section>
 
@@ -64,6 +67,15 @@
         <pre><code data-trim>git branch testing</code></pre>
         <p class="info">Se crea la nueva rama, la cual apunta al commit en el que
           estas actualmente, y tu HEAD también se mantiene ahí.</p>
+      </section>
+
+      <section>
+          <h3>Listar las ramas</h3>
+      </section>
+
+      <section>
+          <h3>Listar todas las ramas incluídas las de remotos</h3>
+          <pre><code data-trim>git branch --all</code></pre>
       </section>
 
       <section id="checkout">
@@ -106,6 +118,60 @@
         <h3>Subir todas las ramas al remoto</h3>
         Utilizamos el comando git push --all [remoto]
         <pre><code>git push --all origin</code></pre>
+      </section>
+
+      <section id="push-fail">
+        <h3>Resolución de errores al hacer push</h3>
+        Si se intenta subir cambios, pero nuestra rama no esta actualizada, nos
+        marcara este error
+        <pre><code>To github.com:nmicht/mdweb-practica-git.git
+ ! [rejected]        dev -> dev (non-fast-forward)
+error: failed to push some refs to 'git@github.com:nmicht/mdweb-practica-git.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.</code></pre>
+      </section>
+
+      <section>
+        <h3>Resolución de errores al hacer push</h3>
+        La solución, tal como lo dice el mensaje, es hacer git pull
+        <pre><code>git pull</code></pre>
+      </section>
+
+      <section id="stash">
+          <h3>Resolucion de errores al hacer pull</h3>
+          En ocasiones, cuando intentamos jalar cambios de un remoto, no nos permite
+          porque tenemos archivos en nuestro local que no han sido commiteados
+          en la historia.
+
+          La primer opción es borrar el archivo, pero, no siempre es la ideal.
+          La otra opción es guardarlo temporalmente para luego volverlo a recuperar.
+      </section>
+
+      <section>
+          <h3>Resolucion de errores al hacer pull</h3>
+          <pre><code>From github.com:nmicht/mdweb-practica-git
+ * branch            dev        -> FETCH_HEAD
+error: The following untracked working tree files would be overwritten by merge:
+	test
+Please move or remove them before you merge.
+Aborting</code></pre>
+
+        Primero, agregas tu archivo pendiente al stage
+        <pre><code>git add .</code></pre>
+
+        Mandas tu archivo al stash (almacenado temporalmente pero fuera de la historia)
+        <pre><code>git stash</code></pre>
+      </section>
+
+      <section id="stash-pop">
+          <h3>Recuperando archivos del stage</h3>
+          El stage es un pila de archivos que hemos ido guardando temporalmente.
+          Cuando los quieras recuperar, solo necesitas llamar el primer elemento
+          de la pila.
+
+          <pre><code>git stash pop</code></pre>
       </section>
 
       <section>
