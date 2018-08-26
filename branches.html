@@ -37,7 +37,8 @@
         <ol>
           <li><a href="#/branches">Qué es una rama</a></li>
           <li><a href="#/checkout-b">Crear una rama</a></li>
-          <li><a href="#/orphan">Crear una huérfana</a></li>
+          <li><a href="#/branch">Listar ramas</a></li>
+          <li><a href="#/orphan">Crear una rama huérfana</a></li>
           <li><a href="#/checkout">Cambiarse entre ramas</a></li>
           <li><a href="#/merge">Fusionar cambios de una rama en otra</a></li>
           <li><a href="#/push">Subir rama a remoto</a></li>
@@ -68,13 +69,14 @@
           estas actualmente, y tu HEAD también se mantiene ahí.</p>
       </section>
 
-      <section>
+      <section id="branch">
           <h3>Listar las ramas</h3>
-      </section>
-
-      <section>
-          <h3>Listar todas las ramas incluídas las de remotos</h3>
-          <pre><code data-trim>git branch --all</code></pre>
+	  Para mostrar la lista de todas las ramas locales el comando se git branch.
+	  <pre><code data-trim>git branch</code></pre>
+	  <p class="info">
+               Se pueden listar también las ramas del remoto con <b>--all</b>
+	  </p>
+	  <pre><code data-trim>git branch --all</code></pre>
       </section>
 
       <section id="checkout">
@@ -122,7 +124,7 @@
       <section id="push-fail">
         <h3>Resolución de errores al hacer push</h3>
         Si se intenta subir cambios, pero nuestra rama no esta actualizada, nos
-        marcara este error
+        marcará este error
         <pre><code>To github.com:nmicht/mdweb-practica-git.git
  ! [rejected]        dev -> dev (non-fast-forward)
 error: failed to push some refs to 'git@github.com:nmicht/mdweb-practica-git.git'
@@ -133,14 +135,15 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.</code
       </section>
 
       <section>
-        <h3>Resolución de errores al hacer push</h3>
-        La solución, tal como lo dice el mensaje, es hacer git pull
+        La solución, tal como lo dice el mensaje, es hacer git pull y con ello actualizaremos
+	nuestra rama local con los datos actuales en el remoto.
         <pre><code>git pull</code></pre>
+	Después, ya solo basta con volver a intentar el push.
       </section>
 
       <section id="stash">
           <h3>Resolucion de errores al hacer pull</h3>
-          En ocasiones, cuando intentamos jalar cambios de un remoto, no nos permite
+          En ocasiones, cuando intentamos obtener cambios de un remoto, no nos permite
           porque tenemos archivos en nuestro local que no han sido commiteados
           en la historia.
 
@@ -149,7 +152,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.</code
       </section>
 
       <section>
-          <h3>Resolucion de errores al hacer pull</h3>
+          Este es el ejemplo del error
           <pre><code>From github.com:nmicht/mdweb-practica-git
  * branch            dev        -> FETCH_HEAD
 error: The following untracked working tree files would be overwritten by merge:
